@@ -57,7 +57,7 @@ function header() {
             {/* could loop the images here in the Grid components if they are a lot */}
 
             <Container maxWidth="container.xl" mt={10}>
-                <Grid templateColumns="repeat(3, 1fr)">
+                <Grid templateColumns="repeat(3, 1fr)" gap="6">
                     <Box>
                         <Image w="100%" borderRadius="lg" src={imageOne} alt="image one of three"/>
                         <Button colorScheme="teal" variant="link" mt="5">
