@@ -4,6 +4,7 @@ import Upcoming from './components/Upcoming';
 import Popular from './components/Popular';
 import Connected from './components/Connected';
 import Stories from './components/Stories';
+
 import Footer from './components/Footer';
 import { Box } from '@chakra-ui/layout';
 import { Image } from '@chakra-ui/image';

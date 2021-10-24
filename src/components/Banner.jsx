@@ -30,7 +30,18 @@ function header() {
             {/* main punch line */}
             <Box>
                 <Container maxWidth="container.xl">
-                    <Box d="flex" alignItems="center" py="20" flexDirection="row">
+                    <Box 
+                        d="flex" 
+                        alignItems="center" 
+                        py="20" 
+                        flexDirection={{
+                            sm: "column",
+                            md: "row",
+                            lg: "row",
+                            xl: "row",
+                            base: "column"
+                        }}
+                    >
                         <Box mr="6">
                             <Heading as="h1" size="2xl">
                                 <Box fontWeight="black">
@@ -57,7 +68,16 @@ function header() {
             {/* could loop the images here in the Grid components if they are a lot */}
 
             <Container maxWidth="container.xl" mt={10}>
-                <Grid templateColumns="repeat(3, 1fr)" gap="6">
+                <Grid 
+                    templateColumns={{
+                        sm: 'repeat(1, fr)',
+                        md: 'repeat(2, 1fr)',
+                        lg: 'repeat(2, 1fr)',
+                        xl: 'repeat(3, 1fr)',
+                        base: 'repeat(1, fr)'
+                    }}
+                    gap="6"
+                >
                     <Box>
                         <Image w="100%" borderRadius="lg" src={imageOne} alt="image one of three"/>
                         <Button colorScheme="teal" variant="link" mt="5">
@@ -178,14 +198,50 @@ function header() {
 
             {/* Last header section */}
             <Container maxW="container.xl" mt="20">
-                <Grid templateColumns="repeat(2, 1fr)" gap={6}>
+                <Grid 
+                    templateColumns={{
+                        sm: 'repeat(1, 1fr)',
+                        md: 'repeat(2, 1fr)',
+                        lg: 'repeat(2, 1fr)',
+                        xl: 'repeat(2, 1fr)',
+                        base: 'repeat(1, 1fr)',
+                    }} 
+                    gap={6}
+                >
                     <Box>
                         <Heading as="h3" size="lg" mb="7">
                             What do you want to do?
                         </Heading>
 
-                        <Box d="flex" alignItems="center" flexDirection="row" w="100%">
-                            <Box flexBasis="50%" w="100%" mr="2">
+                        <Box 
+                            d="flex" 
+                            alignItems="center" 
+                            flexDirection={{
+                                sm: 'column',
+                                md: 'row',
+                                lg: 'row',
+                                xl: 'row',
+                                base: 'column'
+                            }} 
+                            w="100%"
+                        >
+                            <Box 
+                                flexBasis={{
+                                    sm: '100%',
+                                    md: '50%',
+                                    lg: '50%',
+                                    xl: '50%',
+                                    base: '100%'
+                                }}
+                                w="100%" 
+                                mr={{
+                                    sm: '0',
+                                    md: '2',
+                                    lg: '2',
+                                    xl: '2',
+                                    base: '0'
+                                }}
+                            >
                                 <FormControl id="email">
                                     <Box pos="relative">
                                         <Input

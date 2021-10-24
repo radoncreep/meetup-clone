@@ -39,7 +39,16 @@ function Upcoming() {
                     </Box>
                 </Box>
 
-                <Grid templateColumns="repeat(4, 1fr)" gap={6}>
+                <Grid 
+                    templateColumns={{
+                        sm: "repeat(2, 1fr)",
+                        md: "repeat(2, 1fr)",
+                        lg: "repeat(4, 1fr)",
+                        xl: "repeat(4, 1fr)",
+                        base: "repeat(1, 1fr)"
+                    }}
+                    gap={6}
+                >
                     <Box width="100%" align="left">
                         <Box position="relative">
                         <Image
